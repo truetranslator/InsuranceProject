@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <style> table, th, td { border: 1px solid black; } </style>
+        {# Run `composer require symfony/webpack-encore-bundle`
+           and uncomment the following Encore helpers to start using Symfony UX #}
+        {% block stylesheets %}
+            {#{{ encore_entry_link_tags('app') }}#}
+        {% endblock %}
+
+        {% block javascripts %}
+            {#{{ encore_entry_script_tags('app') }}#}
+        {% endblock %}
+    </head>
+    <body>
+    {% block content %}
+        <h1>Застраховки</h1>
+    <table style="width:400%">
+        <tr>
+            <th>Застраховка id</th> <th>Номер</th> <th>Дата</th> <th>В сила от</th> <th>Застрахователна компания</th> <th>Вид застраховка</th><th>Разсрочване</th>
+            <th>Сума</th><th>Сума за застрахователя</th> <th>Премия</th> <th>% Комисион</th> <th>Комисионна</th> <th>Падеж</th> <th>Платено към застрахов...</th> <th>Платена от ...</th>
+            <th>Начин на плащане</th> <th>Получена комисионна</th> <th>Платено от клиента</th> <th>Забележка</th> <th>Прикачен файл</th>
+            <th>Име</th> <th>Свързано лице</th> <th>Email</th> <th>Познат на</th> <th>ЕГН/ЕИК</th> <th>Телефон</th>
+            <th>Сума 2 вноска</th> <th>Сума за застрахователя</th> <th>Премия</th> <th>% Комисион</th> <th>Комисионна</th> <th>Падеж</th> <th>Платено към застрахов...</th> <th>Платена от ...</th>
+            <th>Начин на плащане</th> <th>Получена комисионна</th> <th>Платено от клиента</th> <th>Забележка</th> <th>Прикачен файл</th>
+            <th>Сума 3 вноска</th> <th>Сума за застрахователя</th> <th>Премия</th> <th>% Комисион</th> <th>Комисионна</th> <th>Падеж</th> <th>Платено към застрахов...</th> <th>Платена от ...</th>
+            <th>Начин на плащане</th> <th>Получена комисионна</th> <th>Платено от клиента</th> <th>Забележка</th> <th>Прикачен файл</th>
+            <th>Сума 4 вноска</th> <th>Сума за застрахователя</th> <th>Премия</th> <th>% Комисион</th> <th>Комисионна</th> <th>Падеж</th> <th>Платено към застрахов...</th> <th>Платена от ...</th>
+            <th>Начин на плащане</th> <th>Получена комисионна</th> <th>Платено от клиента</th> <th>Забележка</th> <th>Прикачен файл</th>
+            <th>Номер на автомобила</th> <th>Номер на талона на автомобила</th> <th>Забележка</th>
+        </tr>
+        <tr>
+            {% for insurance in insurances %}
+            <th>{{ insurance.id }}</th> <th>{{ insurance.insurance_number }}</th> <th>{{ insurance.insurance_date }}</th> <th>{{ insurance.insurance_activ_from }}</th><th>{{ insurance.insurance_company }}</th>
+                <th>{{ insurance.insurance_type }}</th> <th>{{ insurance.insurance_rescheduling }}</th>
+            <th>{{ insurance.insurance_sum }}</th><th>{{ insurance.insurance_sum_for_company }}</th> <th>{{ insurance.insurance_bonus }}</th> <th>{{ insurance.insurance_percent_commission }}</th>
+                <th>{{ insurance.insurance_commission }}</th> <th>{{ insurance.insurance_maturity }}</th> <th>{{ insurance.insurance_paid_to_company }}</th> <th>{{insurance.insurance_paid_from }}</th>
+                <th>{{ insurance.insurance_paid_method }}</th> <th>{{ insurance.insurance_commission_paid }}</th> <th>{{ insurance.insurance_paid_from_client }}</th> <th>{{ insurance.insurance_note }}</th>
+                <th>{{ insurance.insurance_file }}</th>
+            <th>{{ clients.clients_name }}</th> <th>{{ clients.clients_coherence }}</th> <th>{{ clients.clients_email }}</th> <th>{{ clients.clients_familiar }}</th> <th>{{ clients.clients_EGN_EIK }}</th>
+                <th>{{ clients.clients_phone }}</th>
+            <th>{{ insurance.insurance_sum_2 }}</th><th>{{ insurance.insurance_sum_for_company_2 }}</th> <th>{{ insurance.insurance_bonus_2 }}</th> <th>{{ insurance.insurance_percent_commission_2 }}</th>
+                <th>{{ insurance.insurance_commission_2 }}</th> <th>{{ insurance.insurance_maturity_2 }}</th> <th>{{ insurance.insurance_paid_to_company_2 }}</th> <th>{{ insurance.insurance_paid_from_2 }}</th>
+                <th>{{ insurance.insurance_paid_method_2 }}</th> <th>{{ insurance.insurance_commission_paid_2 }}</th> <th>{{ insurance.insurance_paid_from_client_2 }}</th> <th>{{ insurance.insurance_note_2 }}</th>
+                <th>{{ insurance.insurance_file_2 }}</th>
+            <th>{{ insurance.insurance_sum_3 }}</th><th>{{ insurance.insurance_sum_for_company_3 }}</th> <th>{{ insurance.insurance_bonus_3 }}</th> <th>{{ insurance.insurance_percent_commission_3 }}</th>
+                <th>{{ insurance.insurance_commission_3 }}</th> <th>{{ insurance.insurance_maturity_3 }}</th> <th>{{ insurance.insurance_paid_to_company_3 }}</th> <th>{{ insurance.insurance_paid_from_3 }}</th>
+                <th>{{ insurance.insurance_paid_method_3 }}</th> <th>{{ insurance.insurance_commission_paid_3 }}</th> <th>{{ insurance.insurance_paid_from_client_3 }}</th> <th>{{ insurance.insurance_note_3 }}</th>
+                <th>{{ insurance.insurance_file_3 }}</th>
+            <th>{{ insurance.insurance_sum_4 }}</th><th>{{ insurance.insurance_sum_for_company_4 }}</th> <th>{{ insurance.insurance_bonus_4 }}</th> <th>{{ insurance.insurance_percent_commission_4 }}</th>
+                <th>{{ insurance.insurance_commission_4 }}</th> <th>{{ insurance.insurance_maturity_4 }}</th> <th>{{ insurance.insurance_paid_to_company_4 }}</th> <th>{{insurance.insurance_paid_from_4 }}</th>
+                <th>{{ insurance.insurance_paid_method_4 }}</th> <th>{{ insurance.insurance_commission_paid_4 }}</th> <th>{{ insurance.insurance_paid_from_client_4 }}</th> <th>{{ insurance.insurance_note_4 }}</th>
+                <th>{{ insurance.insurance_file_4 }}</th>
+            <th>{{ vehicles.vehicles_number }}</th> <th>{{ vehicles.vehicles_document_number }}</th> <th>{{ vehicles.vehicles_note }}</th>
+
+            {% endfor %}
+        </tr>
+
+    </table>
+    {% endblock %}
+
+    </body>
+</html>

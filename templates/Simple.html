@@ -1,0 +1,594 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.84.0">
+    <title>Checkout example · Bootstrap v5.0</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/checkout/">
+
+
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://getbootstrap.com/docs/5.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="https://getbootstrap.com/docs/5.0/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="https://getbootstrap.com/docs/5.0/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="https://getbootstrap.com/docs/5.0/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="manifest" href="https://getbootstrap.com/docs/5.0/assets/img/favicons/manifest.json">
+    <link rel="mask-icon" href="https://getbootstrap.com/docs/5.0/assets/img/favicons/safari-pinned-tab.svg" color="#7952b3">
+    <link rel="icon" href="https://getbootstrap.com/docs/5.0/assets/img/favicons/favicon.ico">
+    <meta name="theme-color" content="#7952b3">
+
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+
+
+    <!-- Custom styles for this template -->
+    <link href="form-validation.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+<div class="container">
+    <main>
+        <div class="py-5 text-center">
+            <img class="d-block mx-auto mb-4" src="https://getbootstrap.com/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">
+            <h2>База данни за застраховки</h2>
+            <p class="lead">Това е база данни, в която може да въвеждате Вашите полици и да си водите отчетност</p>
+        </div>
+
+        <div class="row g-5">
+
+            <div class="col-md-7 col-lg-8">
+                <h4 class="mb-3">Застраховано лице</h4>
+                <form class="needs-validation" novalidate>
+                    <div class="row g-3">
+                        <div class="col-12">
+                            <label for="clients_name" class="form-label">Име</label>
+                            <input type="text" class="form-control" id="clients_name"  name="clients_name" value="" required>
+                            <div class="invalid-feedback">
+                                Името е задължително.
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <label for="clients_coherence" class="form-label">Свързано лице<span class="text-muted">(Опционално)</span></label>
+                            <div class="input-group has-validation">
+                                <input type="text" class="form-control" id="clients_coherence" name="clients_coherence" placeholder="Свързано лице">
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <label for="clients_email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="clients_email" name="clients_email" placeholder="you@example.com">
+                            <div class="invalid-feedback">
+                                Please enter a valid email address for shipping updates.
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <label for="clients_familiar" class="form-label">Познат на<span class="text-muted">(Опционално)</span></label>
+                            <div class="input-group has-validation">
+                                <input type="text" class="form-control" id="clients_familiar" name="clients_familiar" placeholder="Познат на">
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <label for="clients_EGN_EIK" class="form-label">ЕГН/ЕИК</label>
+                            <input type="number" class="form-control" id="clients_EGN_EIK"  name="clients_EGN_EIK"min="9" max="10"required>
+                            <div class="invalid-feedback">
+                                ЕГН номера е задължителен!
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <label for="clients_phone" class="form-label">Телефон</label>
+                            <input type="number" class="form-control" id="clients_phone" name="clients_phone" min="9" max="13"required>
+                            <div class="invalid-feedback">
+                                Телефонния номер е задължителен!
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr class="my-4">
+
+                    <h4 class="mb-3">Полица</h4>
+                        <form class="needs-validation" novalidate>
+                            <div class="row g-3">
+                                <div class="col-sm-6">
+                                    <label for="insurance_number" class="form-label">Номер</label>
+                                    <input type="number" class="form-control" id="insurance_number" name="insurance_number" placeholder=""  required>
+                                    <div class="invalid-feedback">
+                                        Номера на полицата е задължителен.
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <label for="insurance_date" class="form-label">Дата</label>
+                                    <input type="date" class="form-control" id="insurance_date" name="insurance_date" required>
+                                    <div class="invalid-feedback">
+                                        Датата на полицата е задължителна.
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <label for="insurance_active_from" class="form-label">В сила от</label>
+                                    <input type="date" class="form-control" id="insurance_active_from" name="insurance_active_from" required>
+                                    <div class="invalid-feedback">
+                                        Датата на полицата е задължителна.
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <label for="insurance_company" class="form-label">Застрахователна компания</label>
+                                    <select class="form-select" id="insurance_company" name="insurance_company" required>
+                                        <option value="">Избери...</option>
+                                        <option>ДЗИ Застраховане</option>
+                                    </select>
+                                    <div class="invalid-feedback">
+                                        Моля, изберете Застрахователна компания.
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <label for="insurance_type" class="form-label">Вид застраховка</label>
+                                    <select class="form-select" id="insurance_type" name="insurance_type" required>
+                                        <option value="">Избери...</option>
+                                        <option>Автокаско</option>
+                                        <option>Гражданска отговорност</option>
+                                    </select>
+                                    <div class="invalid-feedback">
+                                        Моля, изберете Вид застраховка.
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <label for="insurance_rescheduling" class="form-label">Разсрочване</label>
+                                    <select class="form-select" id="insurance_rescheduling" name="insurance_rescheduling" required>
+                                        <option value="">Избери...</option>
+                                        <option>Еднократно</option>
+                                        <option>2 вноски</option>
+                                        <option>3 вноски</option>
+                                        <option>4 вноски</option>
+                                        <option>Друго</option>
+                                    </select>
+                                    <div class="invalid-feedback">
+                                        Моля, изберете Поредна вноска.
+                                    </div>
+                                </div>
+                                <hr class="my-4">
+                                <div class="col-sm-3">
+                                    <label for="insurance_sum" class="form-label">Сума</label>
+                                    <input type="number" step="any"  class="form-control" id="insurance_sum" name="insurance_sum"  required>
+                                    <div class="invalid-feedback">
+                                        Сума е задължителна.
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <label for="insurance_sum_for_company" class="form-label">Сума за застрахователя</label>
+                                    <input type="number" step="any" class="form-control" id="insurance_sum_for_company" name="insurance_sum_for_company"  required>
+                                    <div class="invalid-feedback">
+                                        Сума за застрахователя е задължителна.
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <label for="insurance_bonus" class="form-label">Премия</label>
+                                    <input type="number" step="any" class="form-control" id="insurance_bonus" name="insurance_bonus"  required>
+                                    <div class="invalid-feedback">
+                                        Премията е задължителна.
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <label for="insurance_percent_commission" class="form-label">% Комисион</label>
+                                    <select class="form-select" id="insurance_percent_commission" name="insurance_percent_commission" required>
+                                        <option value="">Избери...</option>
+                                        <option>10</option>
+                                        <option>20</option>
+                                        <option>30</option>
+                                        <option>40</option>
+                                    </select>
+                                    <div class="invalid-feedback">
+                                        Моля, изберете Процент комисион.
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <label for="insurance_commission" class="form-label">Комисионна</label>
+                                    <input type="number" step="any" class="form-control" id="insurance_commission" name="insurance_commission"  required>
+                                    <div class="invalid-feedback">
+                                        Комисионната е задължителна.
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <label for="insurance_maturity" class="form-label">Падеж</label>
+                                    <input type="date" class="form-control" id="insurance_maturity" name="insurance_maturity" required>
+                                    <div class="invalid-feedback">
+                                        Падеж е задължителна.
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <label for="insurance_paid_to_company" class="form-label">Платено към застрахов...</label>
+                                    <select class="form-select" id="insurance_paid_to_company" name="insurance_paid_to_company" required>
+                                        <option value="">Избери...</option>
+                                        <option>Да</option>
+                                        <option>Не</option>
+                                    </select>
+                                    <div class="invalid-feedback">
+                                        Моля, изберете дали е платено.
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <label for="insurance_paid_from" class="form-label">Платена от ...</label>
+                                    <select class="form-select" id="insurance_paid_from" name="insurance_paid_from" required>
+                                        <option value="">Избери...</option>
+                                        <option>Касичка</option>
+                                        <option>Ина</option>
+                                        <option>Вержиния</option>
+                                        <option>Друго</option>
+                                    </select>
+                                    <div class="invalid-feedback">
+                                        Моля, изберете от кого е платена.
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <label for="insurance_paid_method" class="form-label">Начин на плащане</label>
+                                    <select class="form-select" id="insurance_paid_method" name="insurance_paid_method" required>
+                                        <option value="">Избери...</option>
+                                        <option>В Брой</option>
+                                        <option>По Банка</option>
+                                    </select>
+                                    <div class="invalid-feedback">
+                                        Моля, изберете Начина на плащане.
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <label for="insurance_commission_paid" class="form-label">Получена комисионна</label>
+                                    <select class="form-select" id="insurance_commission_paid" name="insurance_commission_paid" required>
+                                        <option value="">Избери...</option>
+                                        <option>Да</option>
+                                        <option>Не</option>
+                                    </select>
+                                    <div class="invalid-feedback">
+                                        Моля, изберете дали е Получена комисионната.
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <label for="insurance_paid_from_client" class="form-label">Платено от клиента</label>
+                                    <select class="form-select" id="insurance_paid_from_client" name="insurance_paid_from_client"required>
+                                        <option value="">Избери...</option>
+                                        <option>Да</option>
+                                        <option>Не</option>
+                                    </select>
+                                    <div class="invalid-feedback">
+                                        Моля, изберете дали е Платена от клиента.
+                                    </div>
+                                </div>
+                                <div class="col-sm-12">
+                                    <label for="insurance_note" class="form-label">Забележка</label>
+                                    <textarea class="form-control" id="insurance_note" name="insurance_note" rows="3"></textarea>
+                                </div>
+                                <form>
+                                    <div class="form-group">
+                                        <label for="insurance_file">Прикачи файл</label>
+                                        <input type="file" class="form-control-file" id="insurance_file" name="insurance_file">
+                                    </div>
+                                </form>
+                                <hr class="my-4">
+                                <div class="col-sm-3">
+                                    <label for="insurance_sum-2" class="form-label">Сума 2 вноска </label>
+                                    <input type="number" step="any"  class="form-control" id="insurance_sum-2" name="insurance_sum-2"  >
+                                        </div>
+                                <div class="col-sm-3">
+                                    <label for="insurance_sum_for_company-2" class="form-label">Сума за застрахователя</label>
+                                    <input type="number" step="any" class="form-control" id="insurance_sum_for_company-2" name="insurance_sum_for_company-2"  >
+                                    </div>
+                                <div class="col-sm-3">
+                                    <label for="insurance_bonus-2" class="form-label">Премия</label>
+                                    <input type="number" step="any" class="form-control" id="insurance_bonus-2" name="insurance_bonus-2">
+                                </div>
+                                <div class="col-sm-3">
+                                    <label for="insurance_percent_commission-2" class="form-label">% Комисион</label>
+                                    <select class="form-select" id="insurance_percent_commission-2" name="insurance_percent_commission-2">
+                                        <option value="">Избери...</option>
+                                        <option>10</option>
+                                        <option>20</option>
+                                        <option>30</option>
+                                        <option>40</option>
+                                        </select>
+                                </div>
+                                <div class="col-sm-3">
+                                    <label for="insurance_commission-2" class="form-label">Комисионна</label>
+                                    <input type="number" step="any" class="form-control" id="insurance_commission-2" name="insurance_commission-2"  >
+                                </div>
+                                <div class="col-sm-3">
+                                    <label for="insurance_maturity-2" class="form-label">Падеж</label>
+                                    <input type="date" class="form-control" id="insurance_maturity-2" name="insurance_maturity-2">
+                                </div>
+                                <div class="col-sm-3">
+                                    <label for="insurance_paid_to_company-2" class="form-label">Платено към застрахов...</label>
+                                    <select class="form-select" id="insurance_paid_to_company-2" name="insurance_paid_to_company-2">
+                                        <option value="">Избери...</option>
+                                        <option>Да</option>
+                                        <option>Не</option>
+                                    </select>
+                                </div>
+                                <div class="col-sm-3">
+                                    <label for="insurance_paid_from-2" class="form-label">Платена от ...</label>
+                                    <select class="form-select" id="insurance_paid_from-2" name="insurance_paid_from-2">
+                                        <option value="">Избери...</option>
+                                        <option>Касичка</option>
+                                        <option>Ина</option>
+                                        <option>Вержиния</option>
+                                        <option>Друго</option>
+                                    </select>
+                                </div>
+                                <div class="col-sm-3">
+                                    <label for="insurance_paid_method-2" class="form-label">Начин на плащане</label>
+                                    <select class="form-select" id="insurance_paid_method-2" name="insurance_paid_method-2">
+                                        <option value="">Избери...</option>
+                                        <option>В Брой</option>
+                                        <option>По Банка</option>
+                                    </select>
+                                    
+                                </div>
+
+                                <div class="col-sm-3">
+                                    <label for="insurance_commission_paid-2" class="form-label">Получена комисионна</label>
+                                    <select class="form-select" id="insurance_commission_paid-2" name="insurance_commission_paid-2">
+                                        <option value="">Избери...</option>
+                                        <option>Да</option>
+                                        <option>Не</option>
+                                    </select>
+                                    
+                                </div>
+
+                                <div class="col-sm-6">
+                                    <label for="insurance_paid_from_client-2" class="form-label">Платено от клиента</label>
+                                    <select class="form-select" id="insurance_paid_from_client-2" name="insurance_paid_from_client-2">
+                                        <option value="">Избери...</option>
+                                        <option>Да</option>
+                                        <option>Не</option>
+                                    </select>
+                                    
+                                </div>
+                                <div class="col-sm-12">
+                                    <label for="insurance_note-2" class="form-label">Забележка</label>
+                                    <textarea class="form-control" id="insurance_note-2" rows="3" name="insurance_note-2"></textarea>
+                                </div>
+                                <form>
+                                    <div class="form-group">
+                                        <label for="insurance_file-2">Прикачи файл</label>
+                                        <input type="file" class="form-control-file" id="insurance_file-2" name="insurance_file-2">
+                                    </div>
+                                </form>
+                                <hr class="my-4">
+                                <div class="col-sm-3">
+                                    <label for="insurance_sum-3" class="form-label">Сума 3 вноска </label>
+                                    <input type="number" step="any"  class="form-control" id="insurance_sum-3" name="insurance_sum-3"  >
+                                    
+                                </div>
+
+                                <div class="col-sm-3">
+                                    <label for="insurance_sum_for_company-3" class="form-label">Сума за застрахователя</label>
+                                    <input type="number" step="any" class="form-control" id="insurance_sum_for_company-3" name="insurance_sum_for_company-3"  >
+                                   
+                                </div>
+
+                                <div class="col-sm-3">
+                                    <label for="insurance_bonus-3" class="form-label">Премия</label>
+                                    <input type="number" step="any" class="form-control" id="insurance_bonus-3" >
+
+                                </div>
+
+                                <div class="col-sm-3">
+                                    <label for="insurance_percent_commission-3" class="form-label">% Комисион</label>
+                                    <select class="form-select" id="insurance_percent_commission-3" >
+                                        <option value="">Избери...</option>
+                                        <option>10</option>
+                                        <option>20</option>
+                                        <option>30</option>
+                                        <option>40</option>
+                                    </select>
+
+                                </div>
+                                <div class="col-sm-3">
+                                    <label for="insurance_commission-3" class="form-label">Комисионна</label>
+                                    <input type="number" step="any" class="form-control" id="insurance_commission-3" placeholder=""  >
+                                   
+                                </div>
+                                <div class="col-sm-3">
+                                    <label for="insurance_maturity-3" class="form-label">Падеж</label>
+                                    <input type="date" class="form-control" id="insurance_maturity-3" >
+                                    
+                                </div>
+
+                                <div class="col-sm-3">
+                                    <label for="insurance_paid_to_company-3" class="form-label">Платено към застрахов...</label>
+                                    <select class="form-select" id="insurance_paid_to_company-3" >
+                                        <option value="">Избери...</option>
+                                        <option>Да</option>
+                                        <option>Не</option>
+                                    </select>
+                                    
+                                </div>
+
+                                <div class="col-sm-3">
+                                    <label for="insurance_paid_from-3" class="form-label">Платена от ...</label>
+                                    <select class="form-select" id="insurance_paid_from-3" >
+                                        <option value="">Избери...</option>
+                                        <option>Касичка</option>
+                                        <option>Ина</option>
+                                        <option>Вержиния</option>
+                                        <option>Друго</option>
+                                    </select>
+                                   
+                                </div>
+
+                                <div class="col-sm-3">
+                                    <label for="insurance_paid_method-3" class="form-label">Начин на плащане</label>
+                                    <select class="form-select" id="insurance_paid_method-3" >
+                                        <option value="">Избери...</option>
+                                        <option>В Брой</option>
+                                        <option>По Банка</option>
+                                    </select>
+                                </div>
+                                <div class="col-sm-3">
+                                    <label for="insurance_commission_paid-3" class="form-label">Получена комисионна</label>
+                                    <select class="form-select" id="insurance_commission_paid-3" >
+                                        <option value="">Избери...</option>
+                                        <option>Да</option>
+                                        <option>Не</option>
+                                    </select>
+                                </div>
+                                <div class="col-sm-6">
+                                    <label for="insurance_paid_from_client-3" class="form-label">Платено от клиента</label>
+                                    <select class="form-select" id="insurance_paid_from_client-3" >
+                                        <option value="">Избери...</option>
+                                        <option>Да</option>
+                                        <option>Не</option>
+                                    </select>
+                                </div>
+                                <div class="col-sm-12">
+                                    <label for="insurance_note-3" class="form-label">Забележка</label>
+                                    <textarea class="form-control" id="insurance_note-3" rows="3"></textarea>
+                                </div>
+                                <form>
+                                    <div class="form-group">
+                                        <label for="insurance_file-3">Прикачи файл</label>
+                                        <input type="file" class="form-control-file" id="insurance_file-3">
+                                    </div>
+                                </form>
+                                <hr class="my-4">
+                                <div class="col-sm-3">
+                                    <label for="insurance_sum-4" class="form-label">Сума 4 вноска </label>
+                                    <input type="number" step="any"  class="form-control" id="insurance_sum-4" placeholder=""  >
+                                </div>
+                                <div class="col-sm-3">
+                                    <label for="insurance_sum_for_company-4" class="form-label">Сума за застрахователя</label>
+                                    <input type="number" step="any" class="form-control" id="insurance_sum_for_company-4" placeholder=""  >
+                                </div>
+                                <div class="col-sm-3">
+                                    <label for="insurance_bonus-4" class="form-label">Премия</label>
+                                    <input type="number" step="any" class="form-control" id="insurance_bonus-4" >
+                                </div>
+                                <div class="col-sm-3">
+                                    <label for="insurance_percent_commission-4" class="form-label">% Комисион</label>
+                                    <select class="form-select" id="insurance_percent_commission-4" >
+                                        <option value="">Избери...</option>
+                                        <option>10</option>
+                                        <option>20</option>
+                                        <option>30</option>
+                                        <option>40</option>
+                                    </select>
+                                </div>
+                                <div class="col-sm-3">
+                                    <label for="insurance_commission-4" class="form-label">Комисионна</label>
+                                    <input type="number" step="any" class="form-control" id="insurance_commission-4" placeholder=""  >
+                                </div>
+                                <div class="col-sm-3">
+                                    <label for="insurance_maturity-4" class="form-label">Падеж</label>
+                                    <input type="date" class="form-control" id="insurance_maturity-4" >
+                                </div>
+                                <div class="col-sm-3">
+                                    <label for="insurance_paid_to_company-4" class="form-label">Платено към застрахов...</label>
+                                    <select class="form-select" id="insurance_paid_to_company-4" >
+                                        <option value="">Избери...</option>
+                                        <option>Да</option>
+                                        <option>Не</option>
+                                    </select>
+                                </div>
+                                <div class="col-sm-3">
+                                    <label for="insurance_paid_from-4" class="form-label">Платена от ...</label>
+                                    <select class="form-select" id="insurance_paid_from-4" >
+                                        <option value="">Избери...</option>
+                                        <option>Касичка</option>
+                                        <option>Ина</option>
+                                        <option>Вержиния</option>
+                                        <option>Друго</option>
+                                    </select>
+                                </div>
+                                <div class="col-sm-3">
+                                    <label for="insurance_paid_method-4" class="form-label">Начин на плащане</label>
+                                    <select class="form-select" id="insurance_paid_method-4" >
+                                        <option value="">Избери...</option>
+                                        <option>В Брой</option>
+                                        <option>По Банка</option>
+                                    </select>
+                                </div>
+                                <div class="col-sm-3">
+                                    <label for="insurance_commission_paid-4" class="form-label">Получена комисионна</label>
+                                    <select class="form-select" id="insurance_commission_paid-4" >
+                                        <option value="">Избери...</option>
+                                        <option>Да</option>
+                                        <option>Не</option>
+                                    </select>
+                                </div>
+                                <div class="col-sm-6">
+                                    <label for="insurance_paid_from_client-4" class="form-label">Платено от клиента</label>
+                                    <select class="form-select" id="insurance_paid_from_client-4" >
+                                        <option value="">Избери...</option>
+                                        <option>Да</option>
+                                        <option>Не</option>
+                                    </select>
+                                </div>
+                                <div class="col-sm-12">
+                                    <label for="insurance_note-4" class="form-label">Забележка</label>
+                                    <textarea class="form-control" id="insurance_note-4" rows="3"></textarea>
+                                </div>
+                                <form>
+                                    <div class="form-group">
+                                        <label for="insurance_file-4">Прикачи файл</label>
+                                        <input type="file" class="form-control-file" id="insurance_file-4">
+                                    </div>
+                                </form>
+                            </div>
+
+                        <hr class="my-4">
+
+                            <h4 class="mb-3">Автомобил<span class="text-muted">(Опционално)</span></h4>
+                            <form class="needs-validation" novalidate>
+                                <div class="col-sm-6">
+                                    <label for="vehicles_number" class="form-label">Номер на автомобила</label>
+                                    <input type="text" class="form-control" id="vehicles_number" >
+                                </div>
+
+                                <div class="col-sm-6">
+                                    <label for="vehicles_document_number" class="form-label">Номер на талона на автомобила</label>
+                                    <input type="number" class="form-control" id="vehicles_document_number" >
+                                </div>
+                                <div class="col-12">
+                                    <label for="vehicles_note" class="form-label">Забележка</label>
+                                    <textarea class="form-control" id="vehicles_note" rows="3"></textarea>
+                                </div>
+
+                                <hr class="my-4">
+                    <button class="w-100 btn btn-primary btn-lg" type="submit" id="save" name="save">Вкарай в базата данни</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer class="my-5 pt-5 text-muted text-center text-small">
+        <p class="mb-1">&copy; 2017–2021 Company Name</p>
+        <ul class="list-inline">
+            <li class="list-inline-item"><a href="#">Privacy</a></li>
+            <li class="list-inline-item"><a href="#">Terms</a></li>
+            <li class="list-inline-item"><a href="#">Support</a></li>
+        </ul>
+    </footer>
+</div>
+
+
+<script src="/docs/5.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+<script src="form-validation.js"></script>
+</body>
+</html>

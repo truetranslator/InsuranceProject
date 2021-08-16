@@ -1,0 +1,86 @@
+
+
+<H4 CLASS="MB-3">ЗАСТРАХОВАНО ЛИЦЕ</H4>
+
+
+<label for="clients_Name" class="form-label">Име</label>
+<label for="clients_coherence" class="form-label">Свързано лице<span class="text-muted">(Опционално)</span></label>
+<label for="clients_email" class="form-label">Email <span class="text-muted">(Опционално)</span></label>
+<label for="clients_familiar" class="form-label">Познат на<span class="text-muted">(Опционално)</span></label>
+<label for="clients_EGN_EIK" class="form-label">ЕГН/ЕИК</label>
+<label for="clients_phone" class="form-label">Телефон</label>
+
+
+<h4 class="mb-3">Полица</h4>
+
+
+<label for="insurance_number" class="form-label">Номер</label>
+<label for="insurance_date" class="form-label">Дата</label>
+<label for="insurance_activ_from" class="form-label">В сила от</label>
+<label for="insurance_company" class="form-label">Застрахователна компания</label>
+<label for="insurance_type" class="form-label">Вид застраховка</label>
+<label for="insurance_rescheduling" class="form-label">Разсрочване</label>
+
+<label for="insurance_sum" class="form-label">Сума</label>
+<label for="insurance_sum_for_company" class="form-label">Сума за застрахователя</label>
+<label for="insurance_bonus" class="form-label">Премия</label>
+<label for="insurance_percent_commission" class="form-label">% Комисион</label>
+<label for="insurance_commission" class="form-label">Комисионна</label>
+<label for="insurance_maturity" class="form-label">Падеж</label>
+<label for="insurance_paid_to_company" class="form-label">Платено към застрахов...</label>
+<label for="insurance_paid_from" class="form-label">Платена от ...</label>
+<label for="insurance_paid_method" class="form-label">Начин на плащане</label>
+<label for="insurance_commission_paid" class="form-label">Получена комисионна</label>
+<label for="insurance_paid_from_client" class="form-label">Платено от клиента</label>
+<label for="insurance_note" class="form-label">Забележка</label>
+<label for="insurance_file">Прикачи файл</label>
+
+<label for="insurance_sum_2" class="form-label">Сума 2 вноска </label>
+<label for="insurance_sum_for_company_2" class="form-label">Сума за застрахователя</label>
+<label for="insurance_bonus_2" class="form-label">Премия</label>
+<label for="insurance_percent_commission_2" class="form-label">% Комисион</label>
+<label for="insurance_commission_2" class="form-label">Комисионна</label>
+<label for="insurance_maturity_2" class="form-label">Падеж</label>
+<label for="insurance_paid_to_company_2" class="form-label">Платено към застрахов...</label>
+<label for="insurance_paid_from_2" class="form-label">Платена от ...</label>
+<label for="insurance_paid_method_2" class="form-label">Начин на плащане</label>
+<label for="insurance_commission_paid_2" class="form-label">Получена комисионна</label>
+<label for="insurance_paid_from_client_2" class="form-label">Платено от клиента</label>
+<label for="insurance_note_2" class="form-label">Забележка</label>
+<label for="insurance_file_2">Прикачи файл</label>
+
+<label for="insurance_sum_3" class="form-label">Сума 3 вноска </label>
+<label for="insurance_sum_for_company_3" class="form-label">Сума за застрахователя</label>
+<label for="insurance_bonus_3" class="form-label">Премия</label>
+<label for="insurance_percent_commission_3" class="form-label">% Комисион</label>
+<label for="insurance_commission_3" class="form-label">Комисионна</label>
+<label for="insurance_maturity_3" class="form-label">Падеж</label>
+<label for="insurance_paid_to_company_3" class="form-label">Платено към застрахов...</label>
+<label for="insurance_paid_from_3" class="form-label">Платена от ...</label>
+<label for="insurance_paid_method_3" class="form-label">Начин на плащане</label>
+<label for="insurance_commission_paid_3" class="form-label">Получена комисионна</label>
+<label for="insurance_paid_from_client_3" class="form-label">Платено от клиента</label>
+<label for="insurance_note_3" class="form-label">Забележка</label>
+<label for="insurance_file_3">Прикачи файл</label>
+
+<label for="insurance_sum_4" class="form-label">Сума 4 вноска </label>
+<label for="insurance_sum_for_company_4" class="form-label">Сума за застрахователя</label>
+<label for="insurance_bonus_4" class="form-label">Премия</label>
+<label for="insurance_percent_commission_4" class="form-label">% Комисион</label>
+<label for="insurance_commission_4" class="form-label">Комисионна</label>
+<label for="insurance_maturity_4" class="form-label">Падеж</label>
+<label for="insurance_paid_to_company_4" class="form-label">Платено към застрахов...</label>
+<label for="insurance_paid_from_4" class="form-label">Платена от ...</label>
+<label for="insurance_paid_method_4" class="form-label">Начин на плащане</label>
+<label for="insurance_commission_paid_4" class="form-label">Получена комисионна</label>
+<label for="insurance_paid_from_client_4" class="form-label">Платено от клиента</label>
+<label for="insurance_note_4" class="form-label">Забележка</label>
+<label for="insurance_file_4">Прикачи файл</label>
+
+
+ <h4 class="mb-3">Автомобил<span class="text-muted">(Опционално)</span></h4>
+ 
+ 
+<label for="vehicles_number" class="form-label">Номер на автомобила</label>
+<label for="vehicles_document_number" class="form-label">Номер на талона на автомобила</label>
+<label for="vehicles_note" class="form-label">Забележка</label>
